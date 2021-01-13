@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.assembly.weather.model.request.Weather;
 import com.assembly.weather.model.response.WeatherDTO;
+import com.assembly.weather.model.response.WeatherDetailsResponse;
 import com.assembly.weather.service.WeatherService;
 
 @RestController
@@ -20,10 +21,10 @@ public class WeatherController {
 
   @GetMapping("/weather")
   //@ResponseBody
-  public ResponseEntity<WeatherDTO> weatherDetails(@RequestParam(defaultValue = "Melbourne​") String city,@RequestParam(defaultValue = "m") String unitOfMetrics) {
+  public ResponseEntity<WeatherDetailsResponse> weatherDetails(@RequestParam(defaultValue = "Melbourne​") String city,@RequestParam(defaultValue = "m") String unitOfMetrics) {
 	  Weather weather = new Weather(city,unitOfMetrics);
 	  WeatherDTO weatherDetails = weatherService.getWeatherDetails(weather);
-    return ResponseEntity.ok(weatherDetails);
+    return ResponseEntity.ok(new WeatherDetailsResponse(weatherDetails.getWind_speed(),weatherDetails.getTemperature_degrees()));
   }
 
 }
