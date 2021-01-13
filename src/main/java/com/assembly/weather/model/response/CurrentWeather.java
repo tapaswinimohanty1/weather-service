@@ -1,4 +1,4 @@
-package com.assembly.payments.model.response;
+package com.assembly.weather.model.response;
 
 public class CurrentWeather {
 

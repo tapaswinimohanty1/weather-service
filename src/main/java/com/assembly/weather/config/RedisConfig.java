@@ -1,4 +1,4 @@
-package com.assembly.payments.config;
+package com.assembly.weather.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,10 +26,10 @@ import javax.annotation.PreDestroy;
 public class RedisConfig {
 
 
-    @Value("${redis.host}")
+    @Value("${spring.redis.host}")
     String hostName;
 
-    @Value("${redis.port}")
+    @Value("${spring.redis.port}")
     Integer port;
 
     @Autowired

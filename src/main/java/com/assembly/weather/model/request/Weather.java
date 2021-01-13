@@ -1,4 +1,4 @@
-package com.assembly.payments.model.request;
+package com.assembly.weather.model.request;
 
 import java.io.Serializable;
 

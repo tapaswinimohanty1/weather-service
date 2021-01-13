@@ -1,7 +1,7 @@
-package com.assembly.payments.service.remote;
+package com.assembly.weather.repository;
 
-import com.assembly.payments.model.response.WeatherDTO;
-import com.assembly.payments.model.response.WeatherDetails;
+import com.assembly.weather.model.response.WeatherDTO;
+import com.assembly.weather.model.response.WeatherDetails;
 
 
 public interface WeatherDao {

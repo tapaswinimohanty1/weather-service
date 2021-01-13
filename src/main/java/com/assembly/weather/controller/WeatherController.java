@@ -1,4 +1,4 @@
-package com.assembly.payments.controller;
+package com.assembly.weather.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.assembly.payments.model.request.Weather;
-import com.assembly.payments.model.response.WeatherDTO;
-import com.assembly.payments.service.WeatherService;
+import com.assembly.weather.model.request.Weather;
+import com.assembly.weather.model.response.WeatherDTO;
+import com.assembly.weather.service.WeatherService;
 
 @RestController
 @RequestMapping("/v1")
@@ -20,7 +20,7 @@ public class WeatherController {
 
   @GetMapping("/weather")
   //@ResponseBody
-  public ResponseEntity<WeatherDTO> weatherDetails(@RequestParam(defaultValue = "melboune") String city,@RequestParam(defaultValue = "m") String unitOfMetrics) {
+  public ResponseEntity<WeatherDTO> weatherDetails(@RequestParam(defaultValue = "Melbourne​") String city,@RequestParam(defaultValue = "m") String unitOfMetrics) {
 	  Weather weather = new Weather(city,unitOfMetrics);
 	  WeatherDTO weatherDetails = weatherService.getWeatherDetails(weather);
     return ResponseEntity.ok(weatherDetails);

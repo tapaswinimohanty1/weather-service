@@ -1,4 +1,4 @@
-package com.assembly.payments.config;
+package com.assembly.weather.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

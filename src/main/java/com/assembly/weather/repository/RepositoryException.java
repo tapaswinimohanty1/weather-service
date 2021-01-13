@@ -1,4 +1,4 @@
-package com.assembly.payments.service.remote;
+package com.assembly.weather.repository;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

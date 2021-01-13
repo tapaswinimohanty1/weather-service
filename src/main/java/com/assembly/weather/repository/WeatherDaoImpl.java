@@ -1,4 +1,4 @@
-package com.assembly.payments.service.remote;
+package com.assembly.weather.repository;
 
 import java.util.Map;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.assembly.payments.model.response.WeatherDTO;
-import com.assembly.payments.model.response.WeatherDetails;
+import com.assembly.weather.model.response.WeatherDTO;
+import com.assembly.weather.model.response.WeatherDetails;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Repository
 public class WeatherDaoImpl implements WeatherDao {
 	
-	private static final String KEY = "user";
+	private static final String KEY = "weather";
 
 	
     @Autowired
